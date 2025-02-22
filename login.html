@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YashiX - เข้าสู่ระบบ & สมัครสมาชิก</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-box">
+            <!-- Logo -->
+            <div class="logo">
+                <span>Y</span>
+            </div>
+            <!-- Login Form -->
+            <div class="form-container" id="loginFormContainer">
+                <h1>เข้าสู่ระบบ</h1>
+                <p class="subtitle">ยินดีต้อนรับกลับมา</p>
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="input-group">
+                        <input type="text" id="loginUsername" placeholder="YashiX" required class="animate-input">
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" placeholder="••••••••" required class="animate-input">
+                    </div>
+                    <div class="remember-me">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <label for="rememberMe">จำฉัน</label>
+                    </div>
+                    <button type="submit" class="auth-btn animate-btn">เข้าสู่ระบบ</button>
+                    <p id="loginError" class="error"></p>
+                </form>
+                <p class="switch-text">ยังไม่มีบัญชี? <span class="switch animate-switch" onclick="switchForm('register')">สมัครสมาชิก</span></p>
+            </div>
+
+            <!-- Register Form -->
+            <div class="form-container" id="registerFormContainer" style="display: none;">
+                <h1>สมัครสมาชิก</h1>
+                <p class="subtitle">เริ่มต้นใช้งานวันนี้</p>
+                <form id="registerForm" onsubmit="handleRegister(event)">
+                    <div class="input-group">
+                        <input type="text" id="registerUsername" placeholder="ชื่อผู้ใช้" required class="animate-input">
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="registerPassword" placeholder="รหัสผ่าน" required class="animate-input">
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="registerConfirmPassword" placeholder="ยืนยันรหัสผ่าน" required class="animate-input">
+                    </div>
+                    <button type="submit" class="auth-btn animate-btn">สมัครสมาชิก</button>
+                    <p id="registerError" class="error"></p>
+                </form>
+                <p class="switch-text">มีบัญชีแล้ว? <span class="switch animate-switch" onclick="switchForm('login')">เข้าสู่ระบบ</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-particles">
+        <!-- พarticle จะถูกสร้างโดย JavaScript -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
